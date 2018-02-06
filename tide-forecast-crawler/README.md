@@ -1,12 +1,11 @@
 #www.tide-forecast.com Web Crawler
 
 ## History
-   * Feb 2012 Implemented as a coding exercise.  The current implementation shows
-     data for four locations:  
-......* Half Moon Bay, California
-......* Huntington Beach, California
-......* Providence, Rhode Island
-......* Wrightsville Beach, North Carolina
+   + Feb 2012 Implemented as a coding exercise.  The current implementation shows data for four locations:  
+   ++ Half Moon Bay, California
+   ++ Huntington Beach, California
+   ++ Providence, Rhode Island
+   ++ Wrightsville Beach, North Carolina
    
 ## How to Run
    This program depends on Python 2.7 which must be present on the system on which it runs
