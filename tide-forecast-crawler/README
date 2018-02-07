@@ -1,18 +1,16 @@
 #www.tide-forecast.com Web Crawler
 
 ## History
-   + Feb 2012 Implemented as a coding exercise.  The current implementation shows data for four locations:  
-   ++ Half Moon Bay, California
-   ++ Huntington Beach, California
-   ++ Providence, Rhode Island
-   ++ Wrightsville Beach, North Carolina
+   * Feb 2012 Implemented as a coding exercise.  The current implementation shows data for four locations:  
+     ** Half Moon Bay, California
+     ** Huntington Beach, California
+     ** Providence, Rhode Island
+     ** Wrightsville Beach, North Carolina
    
 ## How to Run
    This program depends on Python 2.7 which must be present on the system on which it runs
 
-   Usage:  showlowtides [-xml]
-      -xml :  prints data in as XML (without DTD or schema)
-              Without this switch, data is printed as an UTF-8 formatted table
+   Usage:  showlowtides 
 
    It prints the low times of 4 geographic locations that occur after sunrise and before sunset and
    the hight of the tide in feet and meters.  Heights can be positive or negative numbers
@@ -57,6 +55,7 @@
    * At the time of writing, the site only returned data in HTML.  Requests for data as JSON or XML returned errors
    * Parsing the data is a little bit of a challenge because the "date" field in the HTML uses the rowspan construct
      so date is not in ever table row
+   * The level of the time in feet is contained within a <span> tag which makes it hard to parse.
 
 ### Language Choice
    Implementated in Python.  Predict that this choice will provide a robust implementation that others can understand
