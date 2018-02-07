@@ -63,8 +63,6 @@
 
       showlowtides 
 
-      showlowtides -xml
-
    Compare the data provided with the data on the source web pages.
    Check for completeness, data accuracy and correct order
 
