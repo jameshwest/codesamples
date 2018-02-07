@@ -27,10 +27,7 @@
          create the URL for the location
          Fetch the data
          Parse the HTML
-         Cache the parsed HTML data into unique tidalEvents (defined below)
-         Filter the Data
-         Sort the remaining Data (sorted by time)
-         Print the sorted Data
+         Filter, Sort, Print the data
 
 
 ### Information Model
@@ -41,7 +38,7 @@
          list of dateEntry :  A complex structure
 
     Each dateEntry HAS-A
-         dayStamp          : A string, The day for the data contained in this entry
+         dayStamp          : A string, The day for the data contained in this entry.  The format doesn't contain a year
          sunRiseTime
          sunSetTime
          One or Two lowTideEntry's :  A complex structure.  Most days have two low tides, some days only have one
@@ -49,7 +46,7 @@
     Each lowTideEntry HAS-A
          timestamp         : A date/time stamp representing when the low tide will occur
          heightMeters      : A floating point number, representing the tide hight in meters
-         heightFeet        : A floating point number, representing the tide hight in meters
+         heightFeet        : A floating point number, representing the tide hight in feet
     
 ### Raw Data Notes
    * At the time of writing, the site only returned data in HTML.  Requests for data as JSON or XML returned errors
@@ -70,3 +67,6 @@
 
    Compare the data provided with the data on the source web pages.
    Check for completeness, data accuracy and correct order
+
+### Known Bugs
+   Printing of tides will be out of order for month sequences of [Nov, Dec, Jan] and [Dec, Jan, Feb]
